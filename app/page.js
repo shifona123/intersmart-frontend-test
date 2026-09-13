@@ -8,33 +8,17 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main
-      className="min-h-screen bg-[#02091c]"
-    >
-
-      {/* NAVBAR + HERO */}
-      <div
-        className="min-h-screen bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/ai-face.jpeg')",
-        }}
-      >
-        <div className="min-h-screen bg-black/30">
-
-          <Navbar />
-
-          <Hero />
-
-        </div>
+    <main className="min-h-screen bg-[#02091c]">
+      <div className="hero-background min-h-screen bg-center bg-no-repeat">
+        <Navbar />
+        <Hero />
       </div>
 
-      {/* SERVICES */}
       <Services />
       <Process />
       <Contact />
       <Projects />
       <Footer />
-
     </main>
   );
 }
