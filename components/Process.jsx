@@ -131,11 +131,22 @@ export default function Process() {
         <div className="relative mt-3 h-[2px] w-full bg-white/40">
 
           <div
-            className="absolute left-0 top-0 h-[2px] bg-white transition-all duration-500"
-            style={{
-              width: `${((currentSlide + 1) / slides.length) * 100}%`,
-            }}
-          />
+  className={`absolute left-0 top-0 h-[2px] bg-white transition-all duration-500 ${
+    currentSlide === 0
+      ? "w-[14.28%]"
+      : currentSlide === 1
+      ? "w-[28.57%]"
+      : currentSlide === 2
+      ? "w-[42.85%]"
+      : currentSlide === 3
+      ? "w-[57.14%]"
+      : currentSlide === 4
+      ? "w-[71.42%]"
+      : currentSlide === 5
+      ? "w-[85.71%]"
+      : "w-full"
+  }`}
+/>
 
         </div>
 
